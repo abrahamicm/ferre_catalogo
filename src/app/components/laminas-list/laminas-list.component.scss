@@ -1,0 +1,14 @@
+.derecha{
+    text-align: right;
+}
+.centro{
+    text-align: center;
+}
+
+.zebra{
+    background: #fefbe747;
+}
+
+.zebra:nth-of-type(odd){
+    background: #002f8736;
+}

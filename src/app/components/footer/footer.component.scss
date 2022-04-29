@@ -1,0 +1,11 @@
+#home {
+    ion-button{
+      --ion-color-primary:rgb(58, 169, 166) ;
+      --border-radius: 50%;
+        position: absolute;
+       bottom: 0px;
+       transform: translate(50%, -50%);
+       z-index: 9999;
+       
+    }
+   }

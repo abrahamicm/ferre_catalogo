@@ -1,0 +1,37 @@
+#AddImg {
+  background-image: url('../../../assets/img/advance-card-alaska.jpg');
+
+}
+
+.btn-long {
+
+  padding: 10px 15px;
+  margin: 10px 10px;
+  border: 2px solid var(--ion-color-primary);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  ion-icon{
+    color: var(--ion-color-primary);
+  }
+  .title {
+    ion-icon {
+      padding-right: 10px;
+      font-size: 20px;
+      color: var(--ion-color-primary);
+    }
+    ion-label{
+      color: var(--ion-color-primary);
+    }
+    .name {
+      font-size: 18px;
+      font-family: "medium";
+     
+    }
+  }
+  .chevron {
+    font-size: 20px;
+  }
+}

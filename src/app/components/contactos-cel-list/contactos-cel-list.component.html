@@ -1,0 +1,12 @@
+
+<div class="icon">
+  <ion-row >
+    <a *ngFor="let contacto of contactos" [href]="'tel:'+contacto.numero">
+    <ion-col   class="icon">
+      <ion-icon name="call-outline"></ion-icon>
+      <ion-label class="number">{{contacto.nombre}}</ion-label>
+      <ion-label class="title">{{contacto.numero}}</ion-label>
+    </ion-col>
+  </a>
+  </ion-row>
+</div>

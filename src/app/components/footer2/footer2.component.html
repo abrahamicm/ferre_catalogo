@@ -1,0 +1,14 @@
+<div class="icon border-top" >
+  <ion-row class="ion-justify-content-around">
+    <a *ngFor="let i of botones" [href]="i.enlace">
+    <ion-col   class="icon" >
+     
+      <ion-icon [name]="i.icono"></ion-icon>
+      <ion-label class="title">{{i.texto}}</ion-label>
+
+   
+    </ion-col>
+  </a>
+   
+  </ion-row>
+</div>
