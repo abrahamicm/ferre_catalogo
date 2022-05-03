@@ -1,0 +1,70 @@
+<ion-grid>
+    <ion-row>
+        <ion-col class="centro" *ngIf="Nombre"  >
+            <ion-text color="secondary">
+                <b>{{Nombre}}</b>
+            </ion-text>
+        </ion-col>
+
+        <ion-col class="MM_title" *ngIf="MM"  >
+            <ion-text color="secondary">
+                <b>{{MM}}</b>
+            </ion-text>
+        </ion-col>
+        <ion-col class="centro" *ngIf="Mts"  >
+            <ion-text color="secondary">
+                <b>{{Mts}}</b>
+            </ion-text>
+        </ion-col>
+        <ion-col class="Medida_title" *ngIf="Medida">
+            <ion-text color="secondary">
+                <b>{{Medida}}</b>
+            </ion-text>
+
+        </ion-col>
+        <ion-col class="Marca centro" *ngIf="Marca">
+            <ion-text color="secondary">
+                <b>{{Marca}}</b>
+            </ion-text>
+
+        </ion-col>
+        <ion-col class="Peso_title" *ngIf="Peso">
+            <ion-text color="secondary">
+                <b>{{Peso}}</b>
+            </ion-text>
+
+        </ion-col>
+
+        <ion-col class="Precio_title" *ngIf="Precio">
+            <ion-text color="secondary">
+                <b>{{Precio}}</b>
+            </ion-text>
+
+        </ion-col>
+    </ion-row>
+
+    <ion-row *ngFor="let base of lista" class="zebra">
+
+        <ion-col class="centro" *ngIf="Nombre"  >
+            <div class="centro"> {{base.nombre}}</div>
+        </ion-col>
+        
+        <ion-col class="MM_col" *ngIf="Mts"  >
+            <div class="MM_div"> {{base.mts}}</div>
+        </ion-col>
+        <ion-col class="Medida_col" *ngIf="Medida" size="5"> 
+            <div class="Medida_div">{{base.medida}}</div>
+        </ion-col>
+
+        <ion-col class="centro" *ngIf="Marca">
+            <div class="centro">{{base.marca}}</div>
+        </ion-col>
+
+        <ion-col class="Peso_col" *ngIf="Peso">
+            <div class="Peso_div">{{base.peso}}</div>
+        </ion-col>
+        <ion-col class="Precio_col" *ngIf="Precio">
+            <div class="Precio_div">{{base.precio}}</div>
+        </ion-col>
+    </ion-row>
+</ion-grid>

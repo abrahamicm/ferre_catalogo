@@ -12,4 +12,5 @@ export class PletinasPage implements OnInit {
   ngOnInit() {
   }
 
+  
 }

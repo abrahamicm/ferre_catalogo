@@ -16,6 +16,14 @@ import  {NgxDatatableModule}  from '@swimlane/ngx-datatable';
 import { NgxTableBootstrapComponent } from './ngx-table-bootstrap/ngx-table-bootstrap.component';
 import { LaminasListComponent } from './laminas-list/laminas-list.component';
 import { Footer2Component } from './footer2/footer2.component';
+import { BaseMaterialListComponent } from './base-material-list/base-material-list.component';
+import { AngulosListComponent } from './angulos-list/angulos-list.component';
+import { CabillasListComponent } from './cabillas-list/cabillas-list.component';
+import { OfertasListComponent } from './ofertas-list/ofertas-list.component';
+import { PletinasListComponent } from './pletinas-list/pletinas-list.component';
+import { TubosEstructuralesListComponent } from './tubos-estructurales-list/tubos-estructurales-list.component';
+import { TubosHpListComponent } from './tubos-hp-list/tubos-hp-list.component';
+import { VigasListComponent } from './vigas-list/vigas-list.component';
 
 
 
@@ -30,7 +38,15 @@ import { Footer2Component } from './footer2/footer2.component';
     FooterComponent,
     NgxTableBootstrapComponent,
     LaminasListComponent,
-    Footer2Component
+    Footer2Component,
+    BaseMaterialListComponent,
+    AngulosListComponent,
+    CabillasListComponent,
+    OfertasListComponent,
+    PletinasListComponent,
+    TubosEstructuralesListComponent,
+    TubosHpListComponent,
+    VigasListComponent
     
   ],
   imports: [
@@ -52,7 +68,15 @@ import { Footer2Component } from './footer2/footer2.component';
     FooterComponent,
     NgxTableBootstrapComponent,
     LaminasListComponent,
-    Footer2Component
+    Footer2Component,
+    BaseMaterialListComponent,
+    AngulosListComponent,
+    CabillasListComponent,
+    OfertasListComponent,
+    PletinasListComponent,
+    TubosEstructuralesListComponent,
+    TubosHpListComponent,
+    VigasListComponent
     
     
 
