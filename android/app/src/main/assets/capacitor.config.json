@@ -1,6 +1,6 @@
 {
 	"appId": "io.ionic.starter",
 	"appName": "catalogo",
-	"webDir": "docs",
+	"webDir": "www",
 	"bundledWebRuntime": false
 }
