@@ -9,8 +9,7 @@ import { ApiCatalogoService } from '../services/api-catalogo.service';
 export class HomePage {
 
   constructor(private apiCatalogoService:ApiCatalogoService) {
-    apiCatalogoService.getProductos();
-    apiCatalogoService.getCategorias();
+    apiCatalogoService.getCategorias()
   }
 
 }

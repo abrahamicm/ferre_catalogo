@@ -1,0 +1,4 @@
+ionic g service services/api/sedes-api    
+ionic g service services/api/categorias-api
+ionic g service services/api/vendedores-api
+ionic g service services/api/footer-api    

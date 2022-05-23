@@ -1,6 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
+import { APIProducto } from '../interfaces/APIProducto';
+import { IProductos } from '../interfaces/IProductos';
+import {map} from 'rxjs/operators'
+import { ICategorias } from '../interfaces/icategorias';
+import { APICategorias } from '../interfaces/apicategorias';
 
 @Injectable({
   providedIn: 'root'
@@ -9,17 +15,13 @@ export class ApiCatalogoService {
 
   constructor(private http: HttpClient) { }
 
-  getCategorias() {
+  getCategorias():Observable<APICategorias> {
 
-    this.http.get(environment.API_URL+'ferre_categorias').subscribe(data => {
-      console.log(JSON.stringify(data));
-    });
+    return this.http.get<APICategorias>(environment.API_URL+'ferre_categorias')
   }
 
-  getProductos(){
-    this.http.get(environment.API_URL+'ferre-producto').subscribe(data => {
-      console.log(data);
-    });
+  getProductos():Observable<APIProducto>{
+    return this.http.get<APIProducto>(environment.API_URL+'ferre-producto')
     
   }
 }

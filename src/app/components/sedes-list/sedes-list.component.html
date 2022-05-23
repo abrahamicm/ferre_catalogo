@@ -1,0 +1,17 @@
+{{loading$ | async | json}}
+{{sedes$ | async | json}}
+<ion-grid>
+  <ion-row>
+    <ion-col size="6" *ngFor="let sede of sedes$ | async ">
+      <div class="size">
+        <ion-icon name="location-outline"></ion-icon>
+        <p> {{sede.nombre}}</p>
+      </div>
+
+
+    </ion-col>
+
+
+  </ion-row>
+
+</ion-grid>

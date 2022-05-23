@@ -12,14 +12,15 @@ export class BaseMaterialListComponent implements OnInit {
 
   constructor() { }
 
-
-  @Input() lista:IProductos[]
-  @Input() MM:string
-  @Input() Mts:string
-  @Input() Medida:string
-  @Input() Marca:string
-  @Input() Peso:string
-  @Input() Precio:string
-  @Input() Nombre:string
-  ngOnInit() {}
+  // lista de productos
+  @Input() lista: IProductos[]
+  // cabeceras de las tabla de productos
+  @Input() MM: string
+  @Input() Mts: string
+  @Input() Medida: string
+  @Input() Marca: string
+  @Input() Peso: string
+  @Input() Precio: string
+  @Input() Nombre: string
+  ngOnInit() { }
 }

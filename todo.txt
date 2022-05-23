@@ -1,0 +1,37 @@
+* pasar desde list component
+- banner
+- id categoria
+- slug
+
+configurando el app-routing.module.ts
+
+
+ path: 'category/:id_categoria/:slug_categoria/:banner_categoria',
+ [routerLink]="['/category',categoria.id,categoria.slug,categoria.banner]"
+
+Recuperar los parámetros de la url en la página de categorías.
+
+Ajuste en el componente heder-back para que acepte el paramero de url en banner cambio de 
+
+<div class="img" [style.backgroundImage]="backgroundImage">
+<div class="img" [ngStyle]="{'background-image': 'url(' + backgroundImage + ')'}">
+ 
+
+Nota: para el ordenamiento hay que considerar que cuando uno crea un campo con un valor por defecto el plugin de campo personalizado no aparece mi Api.
+
+  compareFn = (a, b) => {
+    if (a.orden < b.orden)
+
+      return -1;
+    if (a.orden > b.orden)
+      return 1;
+    return 0;
+  };
+
+.subscribe(x => {
+      this.categorias = x
+      this.categorias.sort(this.compareFn)
+    })
+
+página para pasar de voz a texto
+https://www.textfromtospeech.com/es/voice-to-text/

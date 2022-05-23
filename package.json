@@ -10,8 +10,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-     "gh-pages": "ng build --base-href 'https://abrahamicm.github.io/ferre_catalogo/' --prod && npx ngh --dir=www/",
-     "git-page":"ng build --configuration production --output-path=docs"
+    "gh-pages": "ng build --base-href 'https://abrahamicm.github.io/ferre_catalogo/' --prod && npx ngh --dir=www/",
+    "git-page": "ng build --configuration production --output-path=docs"
   },
   "private": true,
   "dependencies": {
@@ -31,6 +31,9 @@
     "@capacitor/keyboard": "1.2.2",
     "@capacitor/status-bar": "1.0.8",
     "@ionic/angular": "^6.0.0",
+    "@ngrx/effects": "^13.2.0",
+    "@ngrx/store": "^13.2.0",
+    "@ngrx/store-devtools": "^13.2.0",
     "@swimlane/ngx-datatable": "^20.0.0",
     "call-number": "^1.0.1",
     "cordova-plugin-android-permissions": "^1.1.3",
@@ -72,5 +75,4 @@
     "typescript": "~4.4.4"
   },
   "description": "An Ionic project"
- 
 }

@@ -1,17 +1,17 @@
 <ion-grid>
     <ion-row>
-        <ion-col class="centro" *ngIf="Nombre"  >
+        <ion-col class="centro" *ngIf="Nombre">
             <ion-text color="secondary">
                 <b>{{Nombre}}</b>
             </ion-text>
         </ion-col>
 
-        <ion-col class="MM_title" *ngIf="MM"  >
+        <ion-col class="MM_title" *ngIf="MM">
             <ion-text color="secondary">
                 <b>{{MM}}</b>
             </ion-text>
         </ion-col>
-        <ion-col class="centro" *ngIf="Mts"  >
+        <ion-col class="centro" *ngIf="Mts">
             <ion-text color="secondary">
                 <b>{{Mts}}</b>
             </ion-text>
@@ -45,14 +45,14 @@
 
     <ion-row *ngFor="let base of lista" class="zebra">
 
-        <ion-col class="centro" *ngIf="Nombre"  >
+        <ion-col class="centro" *ngIf="Nombre">
             <div class="centro"> {{base.nombre}}</div>
         </ion-col>
-        
-        <ion-col class="MM_col" *ngIf="Mts"  >
+
+        <ion-col class="MM_col" *ngIf="Mts">
             <div class="MM_div"> {{base.mts}}</div>
         </ion-col>
-        <ion-col class="Medida_col" *ngIf="Medida" size="5"> 
+        <ion-col class="Medida_col" *ngIf="Medida" size="5">
             <div class="Medida_div">{{base.medida}}</div>
         </ion-col>
 

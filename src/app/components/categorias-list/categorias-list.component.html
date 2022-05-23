@@ -1,16 +1,21 @@
-<div *ngFor="let categoria of categorias" style="width: 85%;margin:0 auto;" >
+<div *ngFor="let categoria of categorias" style="width: 85%;margin:0 auto;">
 
-    <div class="btn-long"  [routerLink]="'/'+categoria.link">
-        <div class="title">
-        
-          <ion-text class="name nombre_1" color="primary">{{categoria.nombre}}</ion-text>
-          <!-- <ion-text class="name nombre_2" color="secondary" >{{categoria.nombre_2}}</ion-text> -->
-        </div>
-        <div class="chevron">
-          <ion-icon name="chevron-forward-outline"></ion-icon>
-        </div>
+  <div class="btn-long" [routerLink]="['/category',categoria.id,categoria.slug,categoria.banner]"
+    [ngClass]="{'ofertas': categoria.slug == 'ofertas'}">
+    <div class="title" *ngIf="categoria.slug == 'ofertas';else otras">
+      <ion-text class="name nombre_1">Ofer</ion-text>
+      <ion-text class="name nombre_2" color="secondary">tas</ion-text>
+    </div>
+    <ng-template #otras>
+      <div class="title">
+        <ion-text class="name nombre_1" color="primary">{{categoria.nombre}}</ion-text>
       </div>
-    
+
+    </ng-template>
+    <div class="chevron">
+      <ion-icon name="chevron-forward-outline"></ion-icon>
+    </div>
+  </div>
+
 
 </div>
-

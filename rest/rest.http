@@ -1,0 +1,8 @@
+@base_url=https://ferreacerovalencia.com.ve/wp-json/wp/v2/
+
+### get all products
+{{base_url}}ferre-producto
+### get categorias 
+{{base_url}}ferre_categorias
+### get sedes 
+{{base_url}}ferre_sedes

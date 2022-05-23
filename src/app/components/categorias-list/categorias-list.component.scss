@@ -1,5 +1,5 @@
 //#AddImg {
-  //background-image: url('../../../assets/img/advance-card-alaska.jpg');
+//background-image: url('../../../assets/img/advance-card-alaska.jpg');
 
 //}
 
@@ -15,51 +15,73 @@
   position: relative;
   // background-image: radial-gradient(circle at center, #ffffff 32%, #e7e6e6  90%);
   background-color: #fff;
-  
 
 
-  ion-icon{
+
+
+  ion-icon {
     color: var(--ion-color-primary);
   }
+
   .title {
     ion-icon {
       padding-right: 10px;
       font-size: 20px;
       color: var(--ion-color-primary);
     }
-    ion-label{
+
+    ion-label {
       color: var(--ion-color-primary);
     }
+
     .name {
       font-size: 16px;
       font-family: "gretaros";
-     
+
     }
   }
+
   .chevron {
     font-size: 20px;
     position: absolute;
     right: 13px;
   }
 }
+
 @media (prefers-color-scheme: dark) {
   .btn-long {
 
 
-    
-    ion-icon{
+
+    ion-icon {
       color: var(--ion-text-color);
     }
+
     .title {
       ion-icon {
 
         color: var(--ion-text-color);
       }
-      ion-label{
+
+      ion-label {
         color: var(--ion-text-color);
       }
 
+    }
+
+  }
+}
+
+
+.btn-long.ofertas {
+  background-color: var(--ion-color-primary);
+
+  ion-icon {
+    color: var(--ion-color-primary-contrast);
   }
 
-}
+  .nombre_1 {
+    color: var(--ion-color-primary-contrast);
+  }
+
 }

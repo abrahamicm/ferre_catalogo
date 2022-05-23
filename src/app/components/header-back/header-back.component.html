@@ -1,9 +1,10 @@
 <ion-header>
-  <div class="img" [style.backgroundImage]="backgroundImage">
+
+  <div class="img" [ngStyle]="{'background-image': 'url(' + backgroundImage + ')'}">
     <div class="icon">
       <ion-icon class="back" name="chevron-back-outline" (click)="goToBack()"></ion-icon>
     </div>
-  
+
   </div>
- 
+
 </ion-header>

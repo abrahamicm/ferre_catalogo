@@ -8,11 +8,11 @@ import { CategoriasListComponent } from './categorias-list/categorias-list.compo
 import { ContactosCelListComponent } from './contactos-cel-list/contactos-cel-list.component';
 import { ContactosComponent } from './contactos/contactos.component';
 
-import { IonicModule } from '@ionic/angular';  
-import {RouterModule} from '@angular/router';
+import { IonicModule } from '@ionic/angular';
+import { RouterModule } from '@angular/router';
 import { HeaderBackComponent } from './header-back/header-back.component';
 import { FooterComponent } from './footer/footer.component';
-import  {NgxDatatableModule}  from '@swimlane/ngx-datatable';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { NgxTableBootstrapComponent } from './ngx-table-bootstrap/ngx-table-bootstrap.component';
 import { LaminasListComponent } from './laminas-list/laminas-list.component';
 import { Footer2Component } from './footer2/footer2.component';
@@ -24,6 +24,7 @@ import { PletinasListComponent } from './pletinas-list/pletinas-list.component';
 import { TubosEstructuralesListComponent } from './tubos-estructurales-list/tubos-estructurales-list.component';
 import { TubosHpListComponent } from './tubos-hp-list/tubos-hp-list.component';
 import { VigasListComponent } from './vigas-list/vigas-list.component';
+import { SedesListComponent } from './sedes-list/sedes-list.component';
 
 
 
@@ -46,8 +47,9 @@ import { VigasListComponent } from './vigas-list/vigas-list.component';
     PletinasListComponent,
     TubosEstructuralesListComponent,
     TubosHpListComponent,
-    VigasListComponent
-    
+    VigasListComponent,
+    SedesListComponent
+
   ],
   imports: [
     CommonModule,
@@ -55,9 +57,9 @@ import { VigasListComponent } from './vigas-list/vigas-list.component';
     RouterModule,
     NgxDatatableModule
 
-    
+
   ],
-  exports:[
+  exports: [
     HeaderComponent,
     HeaderBackComponent,
     ListaPreciosComponent,
@@ -76,9 +78,10 @@ import { VigasListComponent } from './vigas-list/vigas-list.component';
     PletinasListComponent,
     TubosEstructuralesListComponent,
     TubosHpListComponent,
-    VigasListComponent
-    
-    
+    VigasListComponent,
+    SedesListComponent
+
+
 
   ]
 })

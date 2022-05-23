@@ -1,0 +1,18 @@
+ion-icon {
+    font-size: 50px;
+
+}
+
+ion-col {
+    display: flex;
+}
+
+ion-col:nth-of-type(2n+1) {
+    justify-content: flex-end;
+}
+
+.size {
+    width: 100px;
+    // background-color: aqua;
+    text-align: center;
+}

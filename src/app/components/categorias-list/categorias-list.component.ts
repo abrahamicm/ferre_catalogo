@@ -1,5 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewChecked, AfterViewInit, Component, OnInit } from '@angular/core';
+import { ICategorias } from 'src/app/interfaces/icategorias';
 import { Categoria } from 'src/app/models/categoria';
+import { ApiCatalogoService } from 'src/app/services/api-catalogo.service';
+import { IcategoriasAdaprterService } from 'src/app/services/icategorias-adaprter.service';
+import { map, tap } from 'rxjs/operators';
+import { APICategorias } from 'src/app/interfaces/apicategorias';
+import { HttpClient } from '@angular/common/http';
+import { environment } from '../../../environments/environment.prod';
 
 
 @Component({
@@ -7,23 +14,45 @@ import { Categoria } from 'src/app/models/categoria';
   templateUrl: './categorias-list.component.html',
   styleUrls: ['./categorias-list.component.scss'],
 })
-export class CategoriasListComponent implements OnInit {
+export class CategoriasListComponent implements AfterViewChecked {
 
- categorias:Categoria[]=[
-   new Categoria(1,"Laminas","advance-card-alaska","laminas"),
-   new Categoria(2,"Ángulos","advance-card-alaska","angulos"),
-   new Categoria(3,"Pletinas","advance-card-alaska","pletinas"),
-   new Categoria(4,"Cabillas","advance-card-alaska","cabillas"),
-   new Categoria(5,"Vigas","advance-card-alaska","vigas"),
-   new Categoria(6,"Tubos estructurales","advance-card-alaska","tubos-estructurales"),
-   
-  
- ];
-  constructor() { }
 
-  ngOnInit() {}
+  categorias: ICategorias[] = [];
+  categoriasApi: APICategorias[] = [];
+  respuesta = [];
+  banner: string
 
-  
+
+  //categoriasApi:any;
+  compareFn = (a, b) => {
+    if (a.orden < b.orden)
+
+      return -1;
+    if (a.orden > b.orden)
+      return 1;
+    return 0;
+  };
+
+  constructor(private http: HttpClient, private ics: IcategoriasAdaprterService) {
+    this.http.get<APICategorias[]>(environment.API_URL + 'ferre_categorias').pipe(
+      map(x => ics.converApiPToIc(x)
+
+      )
+
+
+    ).subscribe(x => {
+
+      this.categorias = x
+      this.categorias.sort(this.compareFn)
+    })
+
+  }
+  ngAfterViewChecked() {
+
+
+  }
+
+
 }
 
 

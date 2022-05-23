@@ -1,22 +1,26 @@
-.derecha{
+.derecha {
     text-align: right;
 }
-.centro{
+
+.centro {
     text-align: center;
 }
 
-.zebra{
+.zebra {
     background: #fefbe747;
 }
 
-.zebra:nth-of-type(odd){
+.zebra:nth-of-type(odd) {
     background: #002f8736;
 }
 
 .MM_col,
 .Medida_col,
 .Peso_col,
-.Precio_col,.MM_title,.Medida_title,.Peso_title,.Precio_title{
+.Precio_col,
+.MM_title,
+.Medida_title,
+.Peso_title,
+.Precio_title {
     text-align: center;
 }
-
