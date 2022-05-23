@@ -7,6 +7,11 @@ import { map, tap } from 'rxjs/operators';
 import { APICategorias } from 'src/app/interfaces/apicategorias';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment.prod';
+import { CategoriasApiService } from '../../services/api/categorias-api.service';
+import { Store } from '@ngrx/store';
+import { categoriasLoadAction } from 'src/app/store/actions/categorias.actions';
+import { Observable } from 'rxjs';
+import { selectFeatureCategoriasItems, selectFeatureCategoriasLoading } from '../../store/selectors/categorias.selectors';
 
 
 @Component({
@@ -14,45 +19,19 @@ import { environment } from '../../../environments/environment.prod';
   templateUrl: './categorias-list.component.html',
   styleUrls: ['./categorias-list.component.scss'],
 })
-export class CategoriasListComponent implements AfterViewChecked {
+export class CategoriasListComponent implements OnInit {
 
 
-  categorias: ICategorias[] = [];
-  categoriasApi: APICategorias[] = [];
-  respuesta = [];
-  banner: string
+  categorias$: Observable<any> = new Observable()
+  loading$: Observable<any> = new Observable()
 
-
-  //categoriasApi:any;
-  compareFn = (a, b) => {
-    if (a.orden < b.orden)
-
-      return -1;
-    if (a.orden > b.orden)
-      return 1;
-    return 0;
-  };
-
-  constructor(private http: HttpClient, private ics: IcategoriasAdaprterService) {
-    this.http.get<APICategorias[]>(environment.API_URL + 'ferre_categorias').pipe(
-      map(x => ics.converApiPToIc(x)
-
-      )
-
-
-    ).subscribe(x => {
-
-      this.categorias = x
-      this.categorias.sort(this.compareFn)
-    })
-
+  constructor(private store: Store<any>) {
+    this.store.dispatch(categoriasLoadAction())
   }
-  ngAfterViewChecked() {
-
-
+  ngOnInit() {
+    this.categorias$ = this.store.select(selectFeatureCategoriasItems)
+    this.loading$ = this.store.select(selectFeatureCategoriasLoading)
   }
-
-
 }
 
 

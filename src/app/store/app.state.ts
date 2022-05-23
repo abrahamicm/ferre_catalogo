@@ -16,7 +16,9 @@ export interface AppState {
 	categorias: IcategoriasState,
 	sedes: IsedesState,
 	vendedores: IVendedoresState,
-	footer: IfooterItemsState
+	footer: IfooterItemsState,
+
+
 
 }
 

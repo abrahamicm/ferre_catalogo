@@ -1,4 +1,4 @@
-<div *ngFor="let categoria of categorias" style="width: 85%;margin:0 auto;">
+<div *ngFor="let categoria of categorias$ | async" style="width: 85%;margin:0 auto;">
 
   <div class="btn-long" [routerLink]="['/category',categoria.id,categoria.slug,categoria.banner]"
     [ngClass]="{'ofertas': categoria.slug == 'ofertas'}">

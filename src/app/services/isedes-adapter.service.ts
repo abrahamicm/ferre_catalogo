@@ -12,7 +12,8 @@ export class IsedesAdapterService implements IAdapterBase {
   adaptarUno(x: APISedes): ISedes {
     return {
       id: x.id.toString(),
-      nombre: x.name
+      nombre: x.name,
+      slug: x.slug
     }
   }
   adaptarTodos(x: APISedes[]): ISedes[] {

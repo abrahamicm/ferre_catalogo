@@ -15,6 +15,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { ROOT_REDUCER } from './store/app.state';
 import { SedesEffects } from './store/effects/sedes.effects';
+import { CategoriasEffects } from './store/effects/categorias.effects';
 
 
 // cambiar la estructura de carpetas en la tienda
@@ -27,7 +28,7 @@ import { SedesEffects } from './store/effects/sedes.effects';
       ROOT_REDUCER
     ),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
-    EffectsModule.forRoot([SedesEffects]),
+    EffectsModule.forRoot([SedesEffects, CategoriasEffects]),
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,

@@ -2,6 +2,8 @@
 
 ### get all products
 {{base_url}}ferre-producto
+### get all products by sede
+{{base_url}}ferre-producto?ferre_sedes=172
 ### get categorias 
 {{base_url}}ferre_categorias
 ### get sedes 
