@@ -18,7 +18,7 @@ import { LaminasListComponent } from './laminas-list/laminas-list.component';
 import { Footer2Component } from './footer2/footer2.component';
 import { BaseMaterialListComponent } from './base-material-list/base-material-list.component';
 import { AngulosListComponent } from './angulos-list/angulos-list.component';
-import { CabillasListComponent } from './cabillas-list/cabillas-list.component';
+
 import { OfertasListComponent } from './ofertas-list/ofertas-list.component';
 import { PletinasListComponent } from './pletinas-list/pletinas-list.component';
 import { TubosEstructuralesListComponent } from './tubos-estructurales-list/tubos-estructurales-list.component';
@@ -42,7 +42,7 @@ import { SedesListComponent } from './sedes-list/sedes-list.component';
     Footer2Component,
     BaseMaterialListComponent,
     AngulosListComponent,
-    CabillasListComponent,
+
     OfertasListComponent,
     PletinasListComponent,
     TubosEstructuralesListComponent,
@@ -73,7 +73,7 @@ import { SedesListComponent } from './sedes-list/sedes-list.component';
     Footer2Component,
     BaseMaterialListComponent,
     AngulosListComponent,
-    CabillasListComponent,
+
     OfertasListComponent,
     PletinasListComponent,
     TubosEstructuralesListComponent,

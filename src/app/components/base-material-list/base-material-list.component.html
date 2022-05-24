@@ -43,7 +43,7 @@
         </ion-col>
     </ion-row>
 
-    <ion-row *ngFor="let base of lista" class="zebra">
+    <ion-row *ngFor="let base of productos$ | async" class="zebra">
 
         <ion-col class="centro" *ngIf="Nombre">
             <div class="centro"> {{base.nombre}}</div>

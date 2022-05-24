@@ -10,7 +10,7 @@ export class IproductoAdapterService {
 
   constructor() { }
 
-  private apiWpAdapter(wpProduct: APIProducto): IProductos {
+  private adaptarUno(wpProduct: APIProducto): IProductos {
     return {
       id: wpProduct.id.toString(),
       mm: wpProduct.acf.mm,
@@ -21,11 +21,12 @@ export class IproductoAdapterService {
       peso: wpProduct.acf.peso,
       precio: wpProduct.acf.precio,
       existencia: 0,
-      mts:Number(wpProduct.acf.mts)
+      mts: Number(wpProduct.acf.mts),
+      ferre_categorias: wpProduct.ferre_categorias,
+      ferre_sedes: wpProduct.ferre_sedes
     }
   }
-  converApiPToIp(productosApis:APIProducto[]): IProductos[]
-  {
-     return productosApis.map(Ap=> this.apiWpAdapter(Ap))
+  adaptarTodos(productosApis: APIProducto[]): IProductos[] {
+    return productosApis.map(Ap => this.adaptarUno(Ap))
   }
 }

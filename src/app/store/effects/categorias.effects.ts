@@ -14,6 +14,7 @@ export class CategoriasEffects {
 			))
 	)
 	);
+
 	constructor(
 		private actions$: Actions,
 		private api: CategoriasApiService

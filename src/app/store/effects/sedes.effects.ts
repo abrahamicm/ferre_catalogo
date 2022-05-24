@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
-import { Actions, createEffect, ofType } from '@ngrx/effects';
+import { Actions, createEffect, Effect, ofType } from '@ngrx/effects';
 import { EMPTY } from 'rxjs';
-import { map, mergeMap, catchError } from 'rxjs/operators';
+import { map, mergeMap, catchError, tap } from 'rxjs/operators';
 import { SedesApiService } from 'src/app/services/api/sedes-api.service';
+import { Router } from '@angular/router';
 @Injectable()
 export class SedesEffects {
 	loadSedes$ = createEffect(() => this.actions$.pipe(
@@ -10,12 +11,20 @@ export class SedesEffects {
 		mergeMap(() => this.sedesService.getAll()
 			.pipe(
 				map(sedes => ({ type: '[Sedes] Loaded Items', items: sedes })),
-				catchError(() => EMPTY)
+				catchError((e) => { console.log(e); return EMPTY })
 			))
 	)
 	);
+
+	// loginSuccess$ = this.actions$.pipe(
+	// 	ofType('[Sede] seledted'),
+	// 	map(x => x),
+	// 	tap(() => this.router.navigate(['/home'])),
+	// 	catchError((e) => { console.log(e); return EMPTY })
+	// );
 	constructor(
 		private actions$: Actions,
-		private sedesService: SedesApiService
+		private sedesService: SedesApiService,
+		private router: Router
 	) { }
 }

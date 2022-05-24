@@ -17,3 +17,15 @@ export const selectFeatureCategoriasLoading = createSelector(
 	selectSedesFeature,
 	(state: IcategoriasState) => state.loading
 );
+
+export const selectFeatureCategoria = createSelector(
+	selectSedesFeature,
+	(state: IcategoriasState) => {
+		const salida = {
+			categoriaId: state.categoriaId,
+			categoriaSlug: state.categoriaSlug,
+			categoriaBanner: state.categoriaBanner
+		}
+		return salida
+	}
+);

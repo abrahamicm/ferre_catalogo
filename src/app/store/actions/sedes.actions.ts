@@ -7,3 +7,5 @@ export const sedesLoadedAction = createAction('[Sedes] Loaded Items', props<{ it
 
 export const sedeSelectedAction = createAction('[Sede] seledted', props<{ sedeId: number }>());
 
+export const sedeNavegationAction = createAction('[Sede] navigation', props<{ sedeId: number }>());
+

@@ -203,8 +203,12 @@ const routes: Routes = [
     path: 'tubos-hp',
     loadChildren: () => import('./pages/tubos-hp/tubos-hp.module').then(m => m.TubosHpPageModule)
   },
+  // {
+  //   path: 'category/:id_categoria/:slug_categoria/:banner_categoria',
+  //   loadChildren: () => import('./pages/category/category/category.module').then(m => m.CategoryPageModule)
+  // },
   {
-    path: 'category/:id_categoria/:slug_categoria/:banner_categoria',
+    path: 'category',
     loadChildren: () => import('./pages/category/category/category.module').then(m => m.CategoryPageModule)
   },
   {

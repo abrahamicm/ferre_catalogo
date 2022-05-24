@@ -5,6 +5,9 @@ import { map } from 'rxjs/operators';
 import { APIProducto } from 'src/app/interfaces/APIProducto';
 import { IproductoAdapterService } from 'src/app/services/iproducto-adapter.service';
 import { environment } from 'src/environments/environment.prod';
+import { Observable } from 'rxjs';
+import { Store } from '@ngrx/store';
+import { selectFeatureCategoria } from '../../../store/selectors/categorias.selectors';
 
 
 @Component({
@@ -16,6 +19,7 @@ export class CategoryPage implements OnInit {
 
   lista = [];
 
+
   id_categoria: string
   slug_categoria: string
   banner_categoria: string
@@ -23,11 +27,11 @@ export class CategoryPage implements OnInit {
   constructor(
     private ar: ActivatedRoute,
     private http: HttpClient,
-    private ipa: IproductoAdapterService
+    private ipa: IproductoAdapterService,
+    private store: Store<any>
   ) {
     this.ar.params.subscribe(
       x => {
-
         this.id_categoria = x.id_categoria
         this.slug_categoria = x.slug_categoria
         this.banner_categoria = x.banner_categoria
@@ -38,17 +42,19 @@ export class CategoryPage implements OnInit {
   }
 
   listarProductosDeCategorias() {
-
-    this.http.get<APIProducto[]>(environment.API_URL + "ferre-producto?ferre_categorias=" + this.id_categoria)
-      .pipe(
-        map(x => this.ipa.converApiPToIp(x))
-      )
-      .subscribe(x => this.lista = x)
-
+    /*
+        this.http.get<APIProducto[]>(environment.API_URL + "ferre-producto?ferre_categorias=" + this.id_categoria)
+          .pipe(
+            map(x => this.ipa.converApiPToIp(x))
+          )
+          .subscribe(x => this.lista = x)
+    */
   }
 
   ngOnInit() {
-    this.listarProductosDeCategorias()
+    //this.listarProductosDeCategorias()
+
+
 
   }
 
