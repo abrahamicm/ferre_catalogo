@@ -12,7 +12,7 @@ import { FooterComponent } from './footer/footer.component';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { Footer2Component } from './footer2/footer2.component';
 import { BaseMaterialListComponent } from './base-material-list/base-material-list.component';
-import { AngulosListComponent } from './angulos-list/angulos-list.component';
+
 import { SedesListComponent } from './sedes-list/sedes-list.component';
 
 
@@ -27,7 +27,7 @@ import { SedesListComponent } from './sedes-list/sedes-list.component';
     FooterComponent,
     Footer2Component,
     BaseMaterialListComponent,
-    AngulosListComponent,
+
     SedesListComponent
   ],
   imports: [
@@ -46,7 +46,7 @@ import { SedesListComponent } from './sedes-list/sedes-list.component';
     FooterComponent,
     Footer2Component,
     BaseMaterialListComponent,
-    AngulosListComponent,
+
     SedesListComponent
 
 

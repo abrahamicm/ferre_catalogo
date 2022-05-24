@@ -1,5 +1,5 @@
 import { createSelector } from '@ngrx/store';
-import { Categoria } from 'src/app/models/categoria';
+
 import { AppState } from '../app.state';
 import { IcategoriasState } from '../../interfaces/states/icategorias.state';
 
