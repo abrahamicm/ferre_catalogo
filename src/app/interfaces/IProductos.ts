@@ -7,7 +7,7 @@ export interface IProductos {
     peso?: string,
     precio: string,
     existencia?: number,
-    mts?: number,
+    mts?: string,
     ferre_categorias?: number[];
     ferre_sedes?: number[];
 }

@@ -21,7 +21,7 @@ export class IproductoAdapterService {
       peso: wpProduct.acf.peso,
       precio: wpProduct.acf.precio,
       existencia: 0,
-      mts: Number(wpProduct.acf.mts),
+      mts: wpProduct.acf.mts,
       ferre_categorias: wpProduct.ferre_categorias,
       ferre_sedes: wpProduct.ferre_sedes
     }
