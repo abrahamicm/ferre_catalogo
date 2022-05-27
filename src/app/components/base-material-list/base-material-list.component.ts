@@ -25,6 +25,8 @@ export class BaseMaterialListComponent implements OnInit {
   loading$: Observable<any> = new Observable()
   loading: any
 
+  cabeceras: string
+
 
   constructor(private store: Store<any>,
     public loadingController: LoadingController,
@@ -86,7 +88,9 @@ export class BaseMaterialListComponent implements OnInit {
       }
     )
 
-
+    this.categoria_select$.subscribe(
+      x => this.cabeceras = x.cabeceras.toString()
+    );
   }
 
 

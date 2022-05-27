@@ -6,6 +6,10 @@
     text-align: center;
 }
 
+.izquierda {
+    text-align: left;
+}
+
 .zebra {
     background: #fefbe747;
 }
@@ -21,6 +25,9 @@
 .MM_title,
 .Medida_title,
 .Peso_title,
-.Precio_title {
-    text-align: center;
+.Precio_title {}
+
+.Precio_div {
+    text-align: right;
+    margin-left: 15px;
 }

@@ -13,26 +13,26 @@
 
     <ion-row *ngFor="let base of productos$ | async" class="zebra">
 
-        <ion-col class="centro" *ngIf="Nombre">
-            <div class="centro"> {{base.nombre}}</div>
+        <ion-col class="izquierda" *ngIf="cabeceras.includes('Nombre')">
+            <div> {{base.nombre}}</div>
         </ion-col>
 
-        <ion-col class="MM_col" *ngIf="Mts">
-            <div class="MM_div"> {{base.mts}}</div>
+        <ion-col class="centro" *ngIf="cabeceras.includes('mts')">
+            <div> {{base.mts}}</div>
         </ion-col>
-        <ion-col class="Medida_col" *ngIf="Medida" size="5">
-            <div class="Medida_div">{{base.medida}}</div>
-        </ion-col>
-
-        <ion-col class="centro" *ngIf="Marca">
-            <div class="centro">{{base.marca}}</div>
+        <ion-col class="centro" *ngIf="cabeceras.includes('Medida')" size="5">
+            <div>{{base.medida}}</div>
         </ion-col>
 
-        <ion-col class="Peso_col" *ngIf="Peso">
-            <div class="Peso_div">{{base.peso}}</div>
+        <ion-col class="centro" *ngIf="cabeceras.includes('Marca')">
+            <div>{{base.marca}}</div>
         </ion-col>
-        <ion-col class="Precio_col" *ngIf="Precio">
-            <div class="Precio_div">{{base.precio}}</div>
+
+        <ion-col class="centro" *ngIf="cabeceras.includes('Peso')">
+            <div>{{base.peso}}</div>
+        </ion-col>
+        <ion-col class="derecha" *ngIf="cabeceras.includes('Precio')">
+            <div>${{base.precio}}</div>
         </ion-col>
     </ion-row>
 </ion-grid>
