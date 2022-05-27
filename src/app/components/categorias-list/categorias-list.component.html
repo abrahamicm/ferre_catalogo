@@ -1,5 +1,6 @@
 <!-- {{categoria_select$ | async | json}} -->
-<div *ngFor="let categoria of categorias$ | async" style="width: 85%;margin:0 auto;"
+<div style="margin-top: 40px"></div>
+<div *ngFor="let categoria of categorias$ | async" style="width: 85%;margin:0 auto;;"
   (click)="metodo(categoria.id,categoria.slug,categoria.banner,categoria.cabeceras)">
 
   <!-- <div class="btn-long" [routerLink]="['/category',categoria.id,categoria.slug,categoria.banner]" -->
