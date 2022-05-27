@@ -5,5 +5,6 @@ export interface IcategoriasState {
 	items: ReadonlyArray<ICategorias>,
 	categoriaId: number
 	categoriaSlug: string,
-	categoriaBanner: string
+	categoriaBanner: string,
+	cabeceras: string[]
 }

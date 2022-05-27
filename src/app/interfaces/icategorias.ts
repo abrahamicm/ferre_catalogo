@@ -4,6 +4,7 @@ export interface ICategorias {
     banner?: string,
     link?: string,
     slug?: string,
-    orden?: number,
+    orden?: string,
+    cabeceras?: string[];
 
 }

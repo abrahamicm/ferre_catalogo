@@ -4,7 +4,7 @@ import { IcategoriasState } from '../../interfaces/states/icategorias.state';
 import { categoriaSelectedAction, categoriasLoadAction, categoriasLoadedAction } from '../actions/categorias.actions';
 
 
-export const categoriasInitialState: IcategoriasState = { loading: false, items: [], categoriaId: null, categoriaSlug: null, categoriaBanner: null };
+export const categoriasInitialState: IcategoriasState = { loading: false, items: [], categoriaId: null, categoriaSlug: null, categoriaBanner: null, cabeceras: [] };
 
 export const categoriasReducer = createReducer(categoriasInitialState
 	, on(categoriasLoadAction, state => { return { ...state, loading: true } })
@@ -14,13 +14,14 @@ export const categoriasReducer = createReducer(categoriasInitialState
 	on(categoriaSelectedAction, (state, {
 		categoriaId,
 		categoriaSlug,
-		categoriaBanner }) => {
+		categoriaBanner, cabeceras }) => {
 		return {
 			...state,
 			loading: false,
 			categoriaId,
 			categoriaSlug,
-			categoriaBanner
+			categoriaBanner,
+			cabeceras
 		}
 	})
 )

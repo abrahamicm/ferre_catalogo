@@ -16,12 +16,6 @@ export class SedesEffects {
 	)
 	);
 
-	// loginSuccess$ = this.actions$.pipe(
-	// 	ofType('[Sede] seledted'),
-	// 	map(x => x),
-	// 	tap(() => this.router.navigate(['/home'])),
-	// 	catchError((e) => { console.log(e); return EMPTY })
-	// );
 	constructor(
 		private actions$: Actions,
 		private sedesService: SedesApiService,

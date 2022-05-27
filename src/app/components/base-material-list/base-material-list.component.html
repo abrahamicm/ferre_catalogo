@@ -1,46 +1,14 @@
+<!-- {{categoria_select$ | async | json}} -->
 <ion-grid>
     <ion-row>
-        <ion-col class="centro" *ngIf="Nombre">
+
+        <ion-col class="centro" *ngFor="let x of (categoria_select$ | async).cabeceras">
             <ion-text color="secondary">
-                <b>{{Nombre}}</b>
+                <b>{{x.split(":")[1]}}</b>
             </ion-text>
         </ion-col>
 
-        <ion-col class="MM_title" *ngIf="MM">
-            <ion-text color="secondary">
-                <b>{{MM}}</b>
-            </ion-text>
-        </ion-col>
-        <ion-col class="centro" *ngIf="Mts">
-            <ion-text color="secondary">
-                <b>{{Mts}}</b>
-            </ion-text>
-        </ion-col>
-        <ion-col class="Medida_title" *ngIf="Medida">
-            <ion-text color="secondary">
-                <b>{{Medida}}</b>
-            </ion-text>
 
-        </ion-col>
-        <ion-col class="Marca centro" *ngIf="Marca">
-            <ion-text color="secondary">
-                <b>{{Marca}}</b>
-            </ion-text>
-
-        </ion-col>
-        <ion-col class="Peso_title" *ngIf="Peso">
-            <ion-text color="secondary">
-                <b>{{Peso}}</b>
-            </ion-text>
-
-        </ion-col>
-
-        <ion-col class="Precio_title" *ngIf="Precio">
-            <ion-text color="secondary">
-                <b>{{Precio}}</b>
-            </ion-text>
-
-        </ion-col>
     </ion-row>
 
     <ion-row *ngFor="let base of productos$ | async" class="zebra">

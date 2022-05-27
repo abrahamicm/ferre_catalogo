@@ -1,11 +1,13 @@
-<ion-header >
+<ion-header>
   <ion-toolbar color="primary">
-   
+    <div class="icon" *ngIf="!isSedePage">
+      <ion-icon class="back" name="chevron-back-outline" (click)="goToBack()"></ion-icon>
+    </div>
+
     <ion-title style="width: 100%; text-align: center;">
       <img src="assets/img/FERREACERO-5-LOGO-1.png" />
-      
-  </ion-title>
-    
+
+    </ion-title>
+
   </ion-toolbar>
 </ion-header>
-

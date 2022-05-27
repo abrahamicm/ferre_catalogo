@@ -8,6 +8,7 @@ export const categoriasLoadedAction = createAction('[Categorias] Loaded Items', 
 export const categoriaSelectedAction = createAction('[Categoria] seledted', props<{
 	categoriaId: number,
 	categoriaSlug: string,
-	categoriaBanner: string
+	categoriaBanner: string,
+	cabeceras: string[]
 }>());
 

@@ -1,18 +1,13 @@
-{{loading$ | async | json}}
-{{sedeId$ | async | json}}
+<!-- {{loading$ | async | json}}
+{{sedeId$ | async | json}} -->
 
-<ion-grid>
+<ion-grid style="margin-top:50px ;">
   <ion-row>
-    <ion-col size="6" *ngFor="let sede of sedes$ | async ">
+    <ion-col size="6" *ngFor="let sede of sedes$ | async " (click)="seleccionaSedeId(sede.id)">
       <div class="size">
-        <ion-icon name="location-outline" (click)="seleccionaSedeId(sede.id)"></ion-icon>
+        <ion-icon name="location-outline"></ion-icon>
         <p> {{sede.nombre}}</p>
       </div>
-
-
     </ion-col>
-
-
   </ion-row>
-
 </ion-grid>

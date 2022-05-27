@@ -1,12 +1,13 @@
-
 <div class="icon">
-  <ion-row >
-    <a *ngFor="let contacto of contactos" [href]="'tel:'+contacto.numero">
-    <ion-col   class="icon">
-      <ion-icon name="call-outline"></ion-icon>
-      <ion-label class="number">{{contacto.nombre}}</ion-label>
-      <ion-label class="number">{{contacto.numero}}</ion-label>
-    </ion-col>
-  </a>
+  <ion-row>
+    <a *ngFor="let c of items"
+      [href]="(c.tipo == 'cel')? 'tel:'+c.numero :'https://api.whatsapp.com/send?phone='+c.numero">
+
+      <ion-col class="icon">
+        <ion-icon [name]=" (c.tipo == 'whats')?'logo-whatsapp':'call' "></ion-icon>
+        <ion-label class="number">{{c.nombre}}</ion-label>
+        <!-- <ion-label class="number">{{c.numero}}</ion-label> -->
+      </ion-col>
+    </a>
   </ion-row>
 </div>

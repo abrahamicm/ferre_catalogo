@@ -11,14 +11,17 @@ export class IcategoriasAdaprterService {
 
   apiWpAdapter(wpCat: APICategorias): ICategorias {
 
-    return {
+    const r = {
       id: wpCat.id,
       nombre: wpCat.name,
       banner: wpCat.acf.banner.url,
       slug: wpCat.slug,
       orden: wpCat.acf.orden,
       link: wpCat.acf.banner.url,
+      cabeceras: wpCat.acf.cabeceras
     }
+
+    return r
   }
 
   converApiPToIc(productosApis: APICategorias[]): ICategorias[] {

@@ -1,14 +1,7 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { map } from 'rxjs/operators';
-import { APIProducto } from 'src/app/interfaces/APIProducto';
-import { IproductoAdapterService } from 'src/app/services/iproducto-adapter.service';
-import { environment } from 'src/environments/environment.prod';
-import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
-import { selectFeatureCategoria } from '../../../store/selectors/categorias.selectors';
-
+import { Observable } from 'rxjs';
+import { selectFeatureCategoria } from 'src/app/store/selectors/categorias.selectors';
 
 @Component({
   selector: 'app-category',
@@ -16,46 +9,20 @@ import { selectFeatureCategoria } from '../../../store/selectors/categorias.sele
   styleUrls: ['./category.page.scss'],
 })
 export class CategoryPage implements OnInit {
+  loading$: Observable<any> = new Observable()
+  categoria_select$: Observable<any> = new Observable<any>();
 
-  lista = [];
-
-
-  id_categoria: string
-  slug_categoria: string
   banner_categoria: string
-
-  constructor(
-    private ar: ActivatedRoute,
-    private http: HttpClient,
-    private ipa: IproductoAdapterService,
-    private store: Store<any>
-  ) {
-    this.ar.params.subscribe(
-      x => {
-        this.id_categoria = x.id_categoria
-        this.slug_categoria = x.slug_categoria
-        this.banner_categoria = x.banner_categoria
+  constructor(private store: Store<any>) { }
+  ngOnInit() {
+    this.categoria_select$ = this.store.select(selectFeatureCategoria)
+    this.categoria_select$.subscribe(
+      (x) => {
+        const _b = (x['categoriaBanner'] == null) ? "" : x['categoriaBanner']
+        this.banner_categoria = _b
 
       }
-    )
-
-  }
-
-  listarProductosDeCategorias() {
-    /*
-        this.http.get<APIProducto[]>(environment.API_URL + "ferre-producto?ferre_categorias=" + this.id_categoria)
-          .pipe(
-            map(x => this.ipa.converApiPToIp(x))
-          )
-          .subscribe(x => this.lista = x)
-    */
-  }
-
-  ngOnInit() {
-    //this.listarProductosDeCategorias()
-
-
-
+    ).unsubscribe()
   }
 
 }

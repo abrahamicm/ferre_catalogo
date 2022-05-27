@@ -24,8 +24,10 @@ export const selectFeatureCategoria = createSelector(
 		const salida = {
 			categoriaId: state.categoriaId,
 			categoriaSlug: state.categoriaSlug,
-			categoriaBanner: state.categoriaBanner
+			categoriaBanner: state.categoriaBanner,
+			cabeceras: state.cabeceras
 		}
+
 		return salida
 	}
 );

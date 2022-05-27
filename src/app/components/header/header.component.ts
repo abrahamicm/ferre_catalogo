@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-header',
@@ -7,8 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  isSedePage: boolean;
 
-  ngOnInit() {}
+  constructor(
+    private router: Router,
+    private navCtrl: NavController
+  ) {
+    this.isSedePage = this.router.url == "/sedes"
+  }
 
+  ngOnInit() {
+
+  }
+  goToBack() {
+    this.router.navigate(["sedes"]);
+  }
 }
