@@ -4,7 +4,12 @@ import { IcategoriasState } from '../../interfaces/states/icategorias.state';
 import { categoriaSelectedAction, categoriasLoadAction, categoriasLoadedAction } from '../actions/categorias.actions';
 
 
-export const categoriasInitialState: IcategoriasState = { loading: false, items: [], categoriaId: null, categoriaSlug: null, categoriaBanner: null, cabeceras: [] };
+export const categoriasInitialState: IcategoriasState = {
+	loading: false, items: [], categoriaId: 165,
+	categoriaSlug: 'laminas',
+	categoriaBanner: "https://ferreacerovalencia.com.ve/wp-content/uploads/2022/05/la.png",
+	cabeceras: ["espesor:Espesor", "medida:Medida", "precio:Precio"]
+};
 
 export const categoriasReducer = createReducer(categoriasInitialState
 	, on(categoriasLoadAction, state => { return { ...state, loading: true } })

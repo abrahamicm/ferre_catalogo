@@ -11,3 +11,10 @@ h3 {
     color: var(--ion-color-primary);
 
 }
+
+@media (prefers-color-scheme: dark) {
+    h3 {
+        color: var(--ion-color-secondary);
+    }
+
+}

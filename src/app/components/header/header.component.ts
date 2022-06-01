@@ -15,13 +15,13 @@ export class HeaderComponent implements OnInit {
     private router: Router,
     private navCtrl: NavController
   ) {
-    this.isSedePage = this.router.url == "/sedes"
+    this.isSedePage = this.router.url == "/portada"
   }
 
   ngOnInit() {
 
   }
   goToBack() {
-    this.router.navigate(["sedes"]);
+    this.router.navigate(["portada"]);
   }
 }

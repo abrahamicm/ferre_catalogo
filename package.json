@@ -11,7 +11,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "gh-pages": "ng build --base-href 'https://abrahamicm.github.io/ferre_catalogo/' --prod && npx ngh --dir=www/",
-    "git-page": "ng build --configuration production --output-path=docs"
+    "git-page": "ng build --configuration production --output-path=docs",
+    "serveip": "ionic serve --host 186.14.95.166"
   },
   "private": true,
   "dependencies": {

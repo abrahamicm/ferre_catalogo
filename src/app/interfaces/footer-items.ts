@@ -6,7 +6,8 @@ export enum fTipo {
 
 export interface FooterItems {
 	id: string,
-	tipo: string,
-	numero: string,
-	nombre: string
+	enlace: string,
+	nombre: string,
+	icono: string,
+	label: string
 }

@@ -10,4 +10,9 @@ export interface IProductos {
     mts?: string,
     ferre_categorias?: number[];
     ferre_sedes?: number[];
+    tipo?: string,
+    espesor?: string,
+    mostrarTipo?,
+    Largo?: string,
+    Ancho?: string
 }

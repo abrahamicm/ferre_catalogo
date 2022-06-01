@@ -20,9 +20,9 @@ export class ContactosCelListComponent implements OnInit {
   //fTipo
 
   items: FooterItems[] = [
-    { id: "1", tipo: "whats", numero: "584143413241", nombre: "Yagua" },
-    { id: "2", tipo: "whats", numero: "584244001351", nombre: "Sanblas" },
-    { id: "3", tipo: "cel", numero: "584143413241", nombre: "Contacto" }
+    { id: "1", enlace: "https://api.whatsapp.com/send?phone=584143413241", nombre: "Whatsapp", icono: "logo-whatsapp", label: "584143413241" },
+    { id: "3", enlace: "tel:584143413241", nombre: "Teléfono", icono: "call", label: "584143413241" },
+    { id: "2", enlace: "https://www.google.co.ve/maps/place/FERREACERO+VALENCIA/@10.2514055,-67.9127437,21z/data=!4m5!3m4!1s0x0:0xc40a037e3d1487bf!8m2!3d10.2515276!4d-67.913054?hl=es&shorturl=1", nombre: "Ubicación", icono: "location-outline", label: "Yagua" },
   ];
 
   constructor(private callNumber: CallNumber) { }

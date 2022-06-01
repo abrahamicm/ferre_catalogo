@@ -8,12 +8,13 @@ import { ContactosComponent } from './contactos/contactos.component';
 import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 import { HeaderBackComponent } from './header-back/header-back.component';
-import { FooterComponent } from './footer/footer.component';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { Footer2Component } from './footer2/footer2.component';
 import { BaseMaterialListComponent } from './base-material-list/base-material-list.component';
 
 import { SedesListComponent } from './sedes-list/sedes-list.component';
+import { PortadaListComponent } from './portada-list/portada-list.component';
+import { OfertaListComponent } from './oferta-list/oferta-list.component';
 
 
 
@@ -24,11 +25,11 @@ import { SedesListComponent } from './sedes-list/sedes-list.component';
     CategoriasListComponent,
     ContactosCelListComponent,
     ContactosComponent,
-    FooterComponent,
     Footer2Component,
     BaseMaterialListComponent,
-
-    SedesListComponent
+    PortadaListComponent,
+    SedesListComponent,
+    OfertaListComponent
   ],
   imports: [
     CommonModule,
@@ -43,11 +44,12 @@ import { SedesListComponent } from './sedes-list/sedes-list.component';
     CategoriasListComponent,
     ContactosCelListComponent,
     ContactosComponent,
-    FooterComponent,
     Footer2Component,
     BaseMaterialListComponent,
+    PortadaListComponent,
 
-    SedesListComponent
+    SedesListComponent,
+    OfertaListComponent
 
 
 

@@ -1,0 +1,55 @@
+.derecha {
+	text-align: right;
+}
+
+.centro {
+	text-align: center;
+}
+
+.izquierda {
+	text-align: left;
+}
+
+.zebra ion-row {
+	background: #fefbe747;
+}
+
+.zebra:nth-of-type(odd) ion-row.zebra-row {
+	background: #002f8736;
+}
+
+.MM_col,
+.Medida_col,
+.Peso_col,
+.Precio_col,
+.MM_title,
+.Medida_title,
+.Peso_title,
+.Precio_title {}
+
+.Precio_div {
+	text-align: right;
+	margin-left: 15px;
+}
+
+h3 {
+
+	margin-top: 30px;
+	margin-bottom: 25px;
+	font-family: 'gretaros';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+
+
+
+	color: var(--ion-color-secondary);
+
+}
+
+@media (prefers-color-scheme: dark) {
+	h3 {
+		color: var(--ion-color-secondary);
+	}
+
+}

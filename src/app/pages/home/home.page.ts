@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ApiCatalogoService } from '../services/api-catalogo.service';
+import { ApiCatalogoService } from '../../services/api-catalogo.service';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +8,7 @@ import { ApiCatalogoService } from '../services/api-catalogo.service';
 })
 export class HomePage {
 
-  constructor(private apiCatalogoService:ApiCatalogoService) {
+  constructor(private apiCatalogoService: ApiCatalogoService) {
     apiCatalogoService.getCategorias()
   }
 

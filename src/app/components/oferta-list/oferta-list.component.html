@@ -1,0 +1,44 @@
+<!-- {{categoria_select$ | async | json}} -->
+<ion-grid>
+  <ion-row>
+    <ion-col class="centro" *ngFor="let x of (categoria_select$ | async).cabeceras">
+      <ion-text color="secondary">
+        <b>{{x.split(":")[1]}}</b>
+      </ion-text>
+    </ion-col>
+  </ion-row>
+
+  <div *ngFor="let base of productos ;let i = index;let x" class="zebra">
+
+    <ion-row class="zebra-row">
+      <ion-col class="izquierda a" *ngIf="cabeceras.includes('nombre')">
+        <div> {{base.nombre}}</div>
+      </ion-col>
+
+      <ion-col class="centro b" *ngIf="cabeceras.includes('mts')">
+        <div> {{base.mts}}</div>
+      </ion-col>
+
+      <ion-col class="centro c" *ngIf="cabeceras.includes('espesor')">
+        <div>{{base.espesor}}<span *ngIf="base.espesor !='' ">MM</span>
+
+        </div>
+      </ion-col>
+
+      <ion-col class="centro d" *ngIf="cabeceras.includes('medida')" size="5">
+        <div>{{base.medida}}</div>
+      </ion-col>
+
+      <ion-col class="centro e" *ngIf="cabeceras.includes('marca')">
+        <div>{{base.marca}}</div>
+      </ion-col>
+
+      <ion-col class="centro f" *ngIf="cabeceras.includes('Peso')">
+        <div>{{base.peso}}</div>
+      </ion-col>
+      <ion-col class="derecha g" *ngIf="cabeceras.includes('precio')">
+        <div>${{base.precio}}</div>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-grid>

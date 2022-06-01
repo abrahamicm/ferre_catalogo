@@ -22,7 +22,9 @@ export class ProductosApiService {
 
   getByCategory(x): Observable<IProductos[]> {
 
-    return this.h.get<APIProducto[]>(environment.API_URL + 'ferre-producto?ferre_sedes=' + x.sedeId + '&ferre_categorias=' + x.categoriaId
+    return this.h.get<APIProducto[]>(environment.API_URL
+      + 'ferre-producto?ferre_categorias=' + x.categoriaId
+      // + '&ferre_sedes=' + x.sedeId 
       + '&per_page=99'
     ).pipe(
       map(x => this.s.adaptarTodos(x))

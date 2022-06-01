@@ -1,25 +1,23 @@
-import { ChangeDetectorRef, Component, Input, OnDestroy, OnInit } from '@angular/core';
-
-import { Store } from '@ngrx/store';
-import { productosLoadAction } from '../../store/actions/productos.actions';
+import { Component, OnInit, ChangeDetectorRef, Input } from '@angular/core';
 import { Observable } from 'rxjs';
-import { selectFeatureProductosItems, selectFeatureProductosLoading } from 'src/app/store/selectors/productos.selectors';
-import { selectFeatureSedeId } from '../../store/selectors/sedes.selectors';
-import { selectFeatureCategoria } from 'src/app/store/selectors/categorias.selectors';
-import { map, mergeMap, tap } from 'rxjs/operators';
+import { IProductos } from '../../interfaces/IProductos';
+import { Store } from '@ngrx/store';
 import { LoadingController } from '@ionic/angular';
-import { NavigationEnd, Router } from '@angular/router';
-import { IProductos } from 'src/app/interfaces/IProductos';
+import { Router, NavigationEnd } from '@angular/router';
 import { ProductosApiService } from '../../services/api/productos-api.service';
-
-
+import { selectFeatureProductosItems, selectFeatureProductosLoading } from '../../store/selectors/productos.selectors';
+import { selectFeatureSedeId } from '../../store/selectors/sedes.selectors';
+import { selectFeatureCategoria } from '../../store/selectors/categorias.selectors';
+import { map, mergeMap, tap } from 'rxjs/operators';
+import { productosLoadAction } from '../../store/actions/productos.actions';
 
 @Component({
-  selector: 'app-base-material-list',
-  templateUrl: './base-material-list.component.html',
-  styleUrls: ['./base-material-list.component.scss'],
+  selector: 'app-oferta-list',
+  templateUrl: './oferta-list.component.html',
+  styleUrls: ['./oferta-list.component.scss'],
 })
-export class BaseMaterialListComponent implements OnInit {
+export class OfertaListComponent implements OnInit {
+
   productos$: Observable<any> = new Observable()
 
   sedeId$: Observable<any> = new Observable()
@@ -114,7 +112,3 @@ export class BaseMaterialListComponent implements OnInit {
 
 
 }
-
-
-
-

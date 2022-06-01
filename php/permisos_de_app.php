@@ -1,0 +1,7 @@
+edit_dashboard
+edit_posts
+edit_private_posts
+edit_published_posts
+publish_posts
+read
+read_private_posts

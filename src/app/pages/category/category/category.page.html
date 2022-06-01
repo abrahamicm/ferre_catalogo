@@ -1,6 +1,11 @@
 <app-header-back [backgroundImage]="banner_categoria"></app-header-back>
 
-<app-base-material-list [Mts]="'Metros'" [Medida]="'Medida'" [Precio]="'Precio'" class="base-material-list">
+<app-base-material-list [Mts]="'Metros'" [Medida]="'Medida'" [Precio]="'Precio'" class="base-material-list"
+	*ngIf="(categoria_select$ | async).categoriaSlug!= 'ofertas'">
 </app-base-material-list>
+
+<app-oferta-list [Mts]="'Metros'" [Medida]="'Medida'" [Precio]="'Precio'" class="base-material-list"
+	*ngIf="(categoria_select$ | async).categoriaSlug== 'ofertas'">
+</app-oferta-list>
 
 <app-footer2></app-footer2>

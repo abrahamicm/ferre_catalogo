@@ -19,6 +19,7 @@ export interface APIProducto {
     yoast_head: string;
     yoast_head_json: YoastHeadJSON;
     _links: Links;
+    mostrarTipo?
 }
 
 export interface Links {
@@ -61,12 +62,17 @@ export enum Taxonomy {
 
 export interface Acf {
     sku: string;
-    mm: null;
-    mts: null;
-    medida: null;
-    peso: null;
+    mm: string;
+    mts: string;
+    medida: string;
+    peso: string;
     precio: string;
     existencia: string;
+    tipo: string;
+    espesor: string,
+    Largo: string,
+    Ancho: string,
+    orden: string
 }
 
 export interface GUID {
