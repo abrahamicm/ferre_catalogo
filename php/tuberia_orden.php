@@ -1,0 +1,70 @@
+<?php
+
+function tuberia_orden($i, $o)
+{
+	update_post_meta($i, "orden", $o);
+}
+
+tuberia_orden(16540, "10000");
+tuberia_orden(16556, "24025");
+tuberia_orden(16572, "30000");
+tuberia_orden(16541, "4000");
+tuberia_orden(16557, "10400");
+tuberia_orden(16573, "38400");
+tuberia_orden(16542, "4000");
+tuberia_orden(16558, "10400");
+tuberia_orden(16574, "38400");
+tuberia_orden(16543, "4000");
+tuberia_orden(16559, "30625");
+tuberia_orden(16575, "5625");
+tuberia_orden(16544, "4000");
+tuberia_orden(16560, "30625");
+tuberia_orden(16576, "5625");
+tuberia_orden(16545, "4000");
+tuberia_orden(16561, "11700");
+tuberia_orden(16577, "5625");
+tuberia_orden(16546, "12100");
+tuberia_orden(16562, "11700");
+tuberia_orden(16578, "3200");
+tuberia_orden(16547, "14400");
+tuberia_orden(16563, "40000");
+tuberia_orden(16548, "14400");
+tuberia_orden(16564, "48400");
+tuberia_orden(16549, "7200");
+tuberia_orden(16565, "19800");
+tuberia_orden(16550, "9600");
+tuberia_orden(16566, "19800");
+tuberia_orden(16551, "18225");
+tuberia_orden(16567, "67600");
+tuberia_orden(16552, "8400");
+tuberia_orden(16568, "67600");
+tuberia_orden(16537, "10000");
+tuberia_orden(16553, "8400");
+tuberia_orden(16569, "67600");
+tuberia_orden(16538, "10000");
+tuberia_orden(16554, "24025");
+tuberia_orden(16570, "23400");
+tuberia_orden(16539, "10000");
+tuberia_orden(16555, "24025");
+tuberia_orden(16571, "23400");
+tuberia_orden(16588, "2500");
+tuberia_orden(16589, "2500");
+tuberia_orden(16590, "1875");
+tuberia_orden(16591, "1875");
+tuberia_orden(16592, "1875");
+tuberia_orden(16593, "2812.5");
+tuberia_orden(16594, "2812.5");
+tuberia_orden(16579, "468.75");
+tuberia_orden(16595, "2812.5");
+tuberia_orden(16580, "976.5625");
+tuberia_orden(16596, "2812.5");
+tuberia_orden(16581, "625");
+tuberia_orden(16597, "3750");
+tuberia_orden(16582, "625");
+tuberia_orden(16598, "351.5625");
+tuberia_orden(16583, "312.5");
+tuberia_orden(16599, "351.5625");
+tuberia_orden(16584, "156.25");
+tuberia_orden(16585, "1250");
+tuberia_orden(16586, "1875");
+tuberia_orden(16587, "2500");

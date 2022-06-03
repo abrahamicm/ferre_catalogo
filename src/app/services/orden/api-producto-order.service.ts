@@ -19,10 +19,30 @@ export class ApiProductoOrderService {
       return 1;
     }
 
+    if (a.acf.subtipo < b.acf.subtipo) {
+      return -1;
+    }
+    if (a.acf.subtipo > b.acf.subtipo) {
+      return 1;
+    }
+
     if (+a.acf.orden < +b.acf.orden) {
       return -1;
     }
     if (+a.acf.orden > +b.acf.orden) {
+      return 1;
+    }
+
+    if (+a.acf.orden2 < +b.acf.orden2) {
+      return -1;
+    }
+    if (+a.acf.orden2 > +b.acf.orden2) {
+      return 1;
+    }
+    if (+a.acf.orden3 < +b.acf.orden3) {
+      return -1;
+    }
+    if (+a.acf.orden3 > +b.acf.orden3) {
       return 1;
     }
 

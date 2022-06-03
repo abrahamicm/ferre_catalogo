@@ -24,8 +24,8 @@ export class ProductosApiService {
 
     return this.h.get<APIProducto[]>(environment.API_URL
       + 'ferre-producto?ferre_categorias=' + x.categoriaId
-      // + '&ferre_sedes=' + x.sedeId 
       + '&per_page=99'
+      + '&_fields=id,link,type,author,ferre_categorias,ferre_sedes,acf'
     ).pipe(
       map(x => this.s.adaptarTodos(x))
     )

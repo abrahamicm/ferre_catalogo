@@ -1,12 +1,14 @@
 @base_url=https://ferreacerovalencia.com.ve/wp-json/wp/v2/
 
 ### get all products
-{{base_url}}ferre-producto
+{{base_url}}ferre-producto?per_page=400&_fields=id,link,type,author,ferre_categorias,ferre_sedes,acf,title
 ### get all products by sede
 {{base_url}}ferre-producto?ferre_sedes=172
 ### get all products by categorias
-{{base_url}}ferre-producto?ferre_categorias=165
+{{base_url}}ferre-producto?ferre_categorias=170&per_page=99
 ### get categorias 
 {{base_url}}ferre_categorias
 ### get sedes 
 {{base_url}}ferre_sedes
+
+#?_fields,id,link,type,author,ferre_categorias,ferre_sedes,acf

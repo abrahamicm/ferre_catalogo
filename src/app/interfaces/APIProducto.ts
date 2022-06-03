@@ -19,7 +19,8 @@ export interface APIProducto {
     yoast_head: string;
     yoast_head_json: YoastHeadJSON;
     _links: Links;
-    mostrarTipo?
+    mostrarTipo?;
+    mostrarSubTipo?;
 }
 
 export interface Links {
@@ -69,10 +70,13 @@ export interface Acf {
     precio: string;
     existencia: string;
     tipo: string;
+    subtipo: string;
     espesor: string,
     Largo: string,
     Ancho: string,
-    orden: string
+    orden: string,
+    orden2: string,
+    orden3: string,
 }
 
 export interface GUID {

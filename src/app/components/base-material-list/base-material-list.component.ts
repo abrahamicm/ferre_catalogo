@@ -99,7 +99,7 @@ export class BaseMaterialListComponent implements OnInit {
     );
 
     this.productos$.pipe(
-      tap(console.table)
+      //tap(console.table)
     ).subscribe(
       x => {
         this.productos = x

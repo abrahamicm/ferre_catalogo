@@ -33,23 +33,37 @@
 }
 
 h3 {
-
     margin-top: 30px;
     margin-bottom: 25px;
     font-family: 'gretaros';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
-
-
-
+    font-size: 25px;
+    text-align: center;
     color: var(--ion-color-secondary);
-
 }
+
+h4 {
+
+    margin-bottom: 20px;
+    font-family: 'gretaros';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: left;
+    color: var(--ion-color-primary);
+    text-transform: uppercase;
+}
+
 
 @media (prefers-color-scheme: dark) {
     h3 {
+
         color: var(--ion-color-secondary);
+    }
+
+    h4 {
+        color: white
     }
 
 }

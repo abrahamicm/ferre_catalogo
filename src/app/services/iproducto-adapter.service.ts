@@ -29,7 +29,9 @@ export class IproductoAdapterService {
       ferre_categorias: wpProduct.ferre_categorias,
       ferre_sedes: wpProduct.ferre_sedes,
       tipo: wpProduct.acf.tipo,
+      subtipo: wpProduct.acf.subtipo,
       mostrarTipo: wpProduct.mostrarTipo,
+      mostrarSubTipo: wpProduct.mostrarSubTipo,
       espesor: wpProduct.acf.espesor,
       Ancho: wpProduct.acf.Ancho,
       Largo: wpProduct.acf.Largo
@@ -37,11 +39,28 @@ export class IproductoAdapterService {
   }
   adaptarTodos(productosApis: APIProducto[]): IProductos[] {
     let tipoArray = []
+    let subTipoArray = []
+    let actual: null | string;
     // primero hay que ordenar la respuesta que viene del api
     productosApis.sort(this.o.ordenarApiProductos)
 
     let salida = productosApis.map(Ap => {
+      if (actual == Ap.acf.tipo || tipoArray.length == 0) {
+
+
+      } else {
+        subTipoArray = []
+
+      }
+      subTipoArray.push(Ap.acf.subtipo)
+      actual = Ap.acf.tipo
       tipoArray.push(Ap.acf.tipo)
+
+
+      Ap.mostrarSubTipo = subTipoArray.indexOf(Ap.acf.subtipo) == subTipoArray.lastIndexOf(Ap.acf.subtipo)
+
+
+
       Ap.mostrarTipo = tipoArray.indexOf(Ap.acf.tipo) == tipoArray.lastIndexOf(Ap.acf.tipo)
 
       return this.adaptarUno(Ap)

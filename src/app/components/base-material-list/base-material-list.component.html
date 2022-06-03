@@ -2,16 +2,18 @@
 <ion-grid>
 
     <div *ngFor="let base of productos ;let i = index;let x" class="zebra">
-        <!-- && base.tipo!='default:'
-&& base.tipo!='default:' -->
-        <ion-text color="primary" *ngIf="base.mostrarTipo && base.tipo !='default'">
-            <h3>{{base.tipo}}</h3>
+
+
+        <ion-text color="primary">
+            <h3 *ngIf="base.mostrarTipo && base.tipo !='default'">{{base.tipo}}</h3>
+            <h4 *ngIf="base.mostrarSubTipo  && base.subtipo !='default'">{{base.subtipo}}</h4>
         </ion-text>
-        <ion-row *ngIf="base.mostrarTipo">
+        <ion-row>
+
             <ion-col *ngFor="let x of (categoria_select$ | async).cabeceras" [ngClass]="{'centro':!x.includes('Precio'),
         'derecha':x.includes('Precio')
         }">
-                <ion-text color="secondary">
+                <ion-text color="secondary" *ngIf="base.mostrarSubTipo || base.mostrarTipo">
                     <b>{{x.split(":")[1]}}</b>
                 </ion-text>
             </ion-col>
