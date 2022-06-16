@@ -9,7 +9,7 @@
     </div>
   </a>
 
-  <a class="btn-long" href="https://api.whatsapp.com/send?phone=58414341324">
+  <a class="btn-long" [href]="'https://api.whatsapp.com/send?phone='+numero">
     <div class="title">
       <ion-icon class="icono-derecha" name="logo-whatsapp"></ion-icon>
       <ion-text class="name nombre_1" color="primary">Whatsapp</ion-text>
@@ -19,7 +19,7 @@
     </div>
   </a>
 
-  <a class="btn-long" href="tel:58414341324">
+  <a class="btn-long" [href]="'tel:'+numero">
     <div class="title">
       <ion-icon class="icono-derecha" name="call-outline"></ion-icon>
 
@@ -40,8 +40,7 @@
     </div>
   </a>
 
-  <a class="btn-long"
-    href="https://www.google.co.ve/maps/place/FERREACERO+VALENCIA/@10.2514055,-67.9127437,21z/data=!4m5!3m4!1s0x0:0xc40a037e3d1487bf!8m2!3d10.2515276!4d-67.913054?hl=es&shorturl=1">
+  <a class="btn-long" [href]="ubicacion">
     <div class="title">
       <ion-icon class="icono-derecha" name="location-outline"></ion-icon>
       <ion-text class="name nombre_1" color="primary">Ubicacíon</ion-text>

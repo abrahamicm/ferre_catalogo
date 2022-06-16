@@ -11,6 +11,7 @@ import { LoadingController } from '@ionic/angular';
 import { NavigationEnd, Router } from '@angular/router';
 import { IProductos } from 'src/app/interfaces/IProductos';
 import { ProductosApiService } from '../../services/api/productos-api.service';
+import { FormatingService } from '../../services/formating/formating.service';
 
 
 
@@ -35,7 +36,8 @@ export class BaseMaterialListComponent implements OnInit {
     public loadingController: LoadingController,
     private router: Router,
     private cd: ChangeDetectorRef,
-    public o: ProductosApiService
+    public o: ProductosApiService,
+    public f: FormatingService
 
   ) {
     this.loading = this.loadingController.create({

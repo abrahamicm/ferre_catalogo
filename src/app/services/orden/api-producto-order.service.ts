@@ -78,12 +78,15 @@ export class ApiProductoOrderService {
       return 1;
     }
 
-    if (a.title < b.title) {
+    if (a.title.rendered < b.title.rendered) {
+
       return -1;
     }
-    if (a.title > b.title) {
+    if (a.title.rendered > b.title.rendered) {
       return 1;
     }
+
+
 
 
 

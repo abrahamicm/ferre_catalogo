@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from '../../../environments/environment.prod';
 
 @Component({
   selector: 'app-portada-list',
@@ -6,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./portada-list.component.scss'],
 })
 export class PortadaListComponent implements OnInit {
-
+  numero = environment.NUMERO
+  labelNUmero = environment.LABEL_NUMERO
+  ubicacion = environment.UBICACION
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
 }

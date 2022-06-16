@@ -13,14 +13,15 @@
             <ion-col *ngFor="let x of (categoria_select$ | async).cabeceras" [ngClass]="{'centro':!x.includes('Precio'),
         'derecha':x.includes('Precio')
         }">
-                <ion-text color="secondary" *ngIf="base.mostrarSubTipo || base.mostrarTipo">
+                <ion-text color="secondary"
+                    *ngIf="(base.mostrarSubTipo &&  base.subtipo!='')  || (base.mostrarTipo && base.tipo!='') ">
                     <b>{{x.split(":")[1]}}</b>
                 </ion-text>
             </ion-col>
         </ion-row>
         <ion-row class="zebra-row">
             <ion-col class="izquierda a" *ngIf="cabeceras.includes('nombre')">
-                <div> {{base.nombre}}</div>
+                <div> {{f.reamplazar(base.nombre) }}</div>
             </ion-col>
 
             <ion-col class="centro b" *ngIf="cabeceras.includes('mts')">
