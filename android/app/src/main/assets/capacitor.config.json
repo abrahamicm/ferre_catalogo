@@ -2,5 +2,10 @@
 	"appId": "io.ionic.starter",
 	"appName": "catalogo",
 	"webDir": "www",
-	"bundledWebRuntime": false
+	"bundledWebRuntime": false,
+	"server": {
+		"allowNavigation": [
+			"https://ferreacerovalencia.com.ve/"
+		]
+	}
 }
