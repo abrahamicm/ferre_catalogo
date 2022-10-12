@@ -1,56 +1,69 @@
 .btn-long {
 
-    padding: 10px 15px;
-    margin: 10px 10px;
-    border: 2px solid var(--ion-color-primary);
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    background-color:var(--ion-color-primary) ;
-    
-    ion-icon{
-      color: var(--ion-color-primary-contrast);
-    }
-    .title {
-      ion-icon {
-        padding-right: 10px;
-        font-size: 20px;
-        color: var(--ion-color-primary);
-      }
-      ion-label{
-        color: var(--ion-color-primary);
-      }
-      .name {
-        font-size: 16px;
-      font-family: "gretaros";
-       
-      }
-    }
-    .chevron {
+  padding: 10px 15px;
+  margin: 10px 10px;
+  border: 2px solid var(--ion-color-primary);
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  background-color: var(--ion-color-primary);
+
+  ion-icon {
+    color: var(--ion-color-primary-contrast);
+  }
+
+  .title {
+    ion-icon {
+      padding-right: 10px;
       font-size: 20px;
-      position: absolute;
-      right: 13px;
+      color: var(--ion-color-primary);
+    }
+
+    ion-label {
+      color: var(--ion-color-primary);
+    }
+
+    .name {
+      font-size: 16px;
+      font-family: "gretaros";
+
     }
   }
 
-  @media (prefers-color-scheme: dark) {
-    .btn-long {
+  .chevron {
+    font-size: 20px;
+    position: absolute;
+    right: 13px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .btn-long {
 
 
-      
-      ion-icon, .nombre_1{
+
+    ion-icon,
+    .nombre_1 {
+      color: var(--ion-text-color);
+    }
+
+    .title {
+      ion-icon {
+
         color: var(--ion-text-color);
       }
-      .title {
-        ion-icon {
 
-          color: var(--ion-text-color);
-        }
-        ion-label{
-          color: var(--ion-text-color);
-        }
+      ion-label {
+        color: var(--ion-text-color);
+      }
 
     }
 
